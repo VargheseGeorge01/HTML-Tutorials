@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>form validation</title>
+<script type="text/javascript">
+function validate()
+{
+ if(document.myForm.Name.value == "" )
+ {
+   alert("please provide your name");
+   document.write.Name.focus();
+   return false;
+ }
+ if(documet.myForm.Email.value == "")
+ {
+   alert("please provide yuor email id");
+   document.write.Email.focus();
+   return false;
+ }
+ if(document.myForm.Pin.value == "" ||
+ isNaN(document.myForm.Pin.value) ||
+ document.myForm.Pin.value.length != 6)
+ {  
+   alert("please provide pin in format ######");
+   document.myForm.Pin.focus();
+   return false;
+ }
+ if(document.myForm.Country.value == "-1" )
+ {
+   alert("please provide your country");
+   return false;
+ }
+return(true);
+}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return(validate())">
+<table cellspacing="2" cellpadding="2" border="1">
+<tr>
+<td align="right">Name</td>
+<td><input type="text" name="Name"/></td>
+</tr>
+<tr>
+<td align="right">Email</td>
+<td><input type="text" name="Email"/></td>
+</tr>
+<tr>
+<td align="right">ZipCode</td>
+<td><input type="text" name="Pin"/></td>
+</tr>
+<tr>
+<td align="right">Country</td>
+<td>
+<select name="Country">
+<option value="-1" selected>[choose your country]</option>
+<option value="1">USA</option>
+<option value="2">UK</option>
+<option value="3">INDIA</option>
+</selected>
+</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td><input type="submit" value="submit"/></td>
+</tr>
+</table>
+</form>
+</body>
+</html> 
