@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript">
+function warn()
+{
+ var t=parseInt(document.getElementById("text1").value)
+ if(t<0)
+ alert("The no. is a negative number")
+}
+</script>
+</head>
+<body>
+<form>
+Enter a number:
+<input type="text" id="text1">
+<input type="button" onclick="warn()" value="click here">
+</form>
+</body>
+</html>
